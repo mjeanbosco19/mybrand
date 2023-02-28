@@ -1,2 +1,0 @@
-# mybrand
-MERN Project
