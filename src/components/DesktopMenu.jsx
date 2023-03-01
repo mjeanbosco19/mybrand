@@ -55,7 +55,7 @@ function DesktopMenu(props) {
             <span>Portfolio</span>
           </Link>
 
-          <Link to="/blog" className={`menu-items ${location.pathname === '/blog' ? 'active' : ''}`}>
+          <Link to="/blogs" className={`menu-items ${location.pathname === '/blog' ? 'active' : ''}`}>
             <span className="icon-container">
               <img
                 className="icon--menu icon--primary"

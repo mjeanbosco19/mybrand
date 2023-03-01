@@ -1,23 +1,24 @@
 import React from 'react';
-import { BrowserRouter} from 'react-router-dom';
-
-
-import DesktopMenu from '../src/components/DesktopMenu';
-import MobileMenu from '../src/components/MobileMenu';
-import HomePage from '../src/components/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import BlogsPage from './components/BlogsPage';
+import ContactPage from './components/ContactPage';
+import ResumePage from './components/ResumePage';
+import PortfolioPage from './components/PortfolioPage';
 
 function App() {
   return (
-    <BrowserRouter>
-    <header>
-         <DesktopMenu />
-        <MobileMenu />
-    </header>
-      <main className="main-section">
-
-        <HomePage />
-      </main>
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/about" element={<AboutPage />} />
+        <Route exact path="/blogs" element={<BlogsPage />} />
+        <Route exact path="/contact" element={<ContactPage />} />
+        <Route exact path="/resume" element={<ResumePage />} />
+        <Route exact path="/portfolio" element={<PortfolioPage />} />
+      </Routes>
+    </Router>
   );
 }
 
